@@ -1,5 +1,42 @@
-@charset "UTF-8";
+@charset 'UTF-8';
+
+html {
+    font-size: 100%;
+}
+
+/* ここからはBodyです。 */
 
 body {
-    background-color: red;
+    background-image: url(Space.jpg);
+    line-height: 1.7;
+    color: #432;
 }
+
+.align-center {
+    text-align: center;
+}
+
+.body-wrapper {
+    /* background-image: url(Space.jpg); */
+}
+
+.body-wrapper {
+    background: cover;
+    height: 844px;
+    width: 390;
+}
+
+.red {
+    text-align: center;
+    color: red;
+}
+
+@media (min-width: 800px){
+    .body-wrapper {
+        background: cover;
+        height: 1536;
+        width: 2560;
+        padding-bottom: 690px;
+    }
+}
+
