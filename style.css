@@ -1,42 +1,31 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
-html {
-    font-size: 100%;
+.cell {
+    display: flex;
 }
 
-/* ここからはBodyです。 */
-
-body {
-    background-image: url(Space.jpg);
-    line-height: 1.7;
-    color: #432;
-}
-
-.align-center {
+.title-center {
     text-align: center;
 }
-
-.body-wrapper {
-    /* background-image: url(Space.jpg); */
+.margin {
+    margin: 2rem 2rem;
 }
 
-.body-wrapper {
-    background: cover;
-    height: 844px;
-    width: 390;
+ul li {
+    list-style-type: square;
 }
 
-.red {
-    text-align: center;
-    color: red;
+ol li {
+    list-style-type: lower-greek;
 }
 
-@media (min-width: 800px){
-    .body-wrapper {
-        background: cover;
-        height: 1536;
-        width: 2560;
-        padding-bottom: 690px;
-    }
+th, td {
+    padding: 8px;
 }
-
+th {
+    background: skyblue;
+    color: darkblue;
+}
+tr {
+    margin-top: 10px;
+}

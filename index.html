@@ -1,22 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>HTMLの基本</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div class="body-wrapper">
-        <div class="main-wrapper Body-size">
-            <h1 class="align-center title-color">学校でお勉強</h1>
-            <p>とりあえず経験を積もう</p>
-            <p class="red">赤に変更しました。</p>
-        </div>
+    <h1 class="title-center">HTMLの基本 1</h1>
+
+    <h2 class="title-center">箇条書きリスト</h2>
+    <ul class="margin">
+        <li>卵 (3個)</li>
+        <li>しょうゆ (大さじ１)</li>
+        <li>みりん(大さじ１)</li>
+        <li>塩 (少々)</li>
+    </ul>
+    <ol class="margin">
+        <li>卵を割りほぐし、調味料を加える</li>
+        <li>卵焼き器に卵液を1/4量を入れて広げる</li>
+        <li>半熟状になったら箸で手前に巻き、奥に移動させる</li>
+        <li>これを繰り返し、最後まで焼けたら完成です</li>
+    </ol>
+
+    <h2 class="margin">表組み</h2>
+    <h3 class="margin">基本形</h3>
+
+    <table border="10" class="margin">
+        <tr>
+            <th>プラン名</th>
+            <th>料金</th>
+        </tr>
+        <tr>
+            <td>わくわくプラン</td>
+            <td>月額2,900円</td>
+        </tr>
+        <tr>
+            <td>ニコニコプラン</td>
+            <td>月額1,900円</td>
+        </tr>
+    </table>
+
+    <table border="1" class="margin">
+        <tr>
+            <th>セル１</th>
+            <th>セル２</th>
+        </tr>
+        <tr>
+            <th>Sell 3</th>
+            <th>Sell 4</th>
+        </tr>
+        <tr>
+            <th>Sell 5</th>
+            <th>Sell 6</th>
+        </tr>
+    </table>
+    <div class="cell">
+        <h3 class="margin">セルの結合</h3>
+        <h3 class="margin">横方向に結合</h3>
+        <table border="1" class="margin">
+            <tr>
+                <th colspan="2">セル 1+2</th>
+            </tr>
+            <tr>
+                <th>Sell 3</th>
+                <th>Sell 4</th>
+            </tr>
+            <tr>
+                <th>Sell 5</th>
+                <th>Sell 6</th>
+            </tr>
+        </table>
+
+        <h3 class="margin">縦方向に結合</h3>
+        <table border="1" class="margin">
+            <tr>
+                <th>セル 1</th>
+                <th>セル 2</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Cell 3+5</th>
+                <th>Sell 4</th>
+            </tr>
+            <tr>
+                <th>Sell 6</th>
+            </tr>
+        </table>
     </div>
 
+    
+    <h2>フォーム</h2>
+    <form>
+        <p>名前：<input type="text" placeholder="氏名"></p>
+
+        <p>メールアドレス:<input type="email"></p>
+
+        <p>電話番号:<input type="tel"></p>
+
+        <p>
+            性別:
+            <input type="radio" name="gender" value="男" checked>男
+            <input type="radio" name="gender" value="女">女
+            <input type="radio" name="gender" value="その他">その他
+        </p>
+        <p>
+            朝ご飯を食べましたか？
+            <input type="radio" name="bf" value="はい" checked>はい
+            <input type="radio" name="bf" value="いいえ">いいえ
+        </p>
+
+        <p>
+            好きな色:
+            <input type="checkbox" name="color" value="赤" checked>赤
+            <input type="checkbox" name="color" value="青">青
+            <input type="checkbox" name="color" value="黄">黄
+            <input type="checkbox" name="color" value="緑">緑
+        </p>
+
+        <p><input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdPyj_0BbtiZWBHpBlOlRJjD57L5aMdPhwBq0XJkObcg&s" alt="送信" width="100"></p>
+
+          <!-- <p><button type="submit">送信</button></p> -->
+
+          <p>
+            <select name="bloodtype">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="O">O</option>
+                <option value="AB">AB</option>
+                <option value="不明" selected>不明</option>
+            </select>
+          </p>
+
+          <p>
+            <textarea cols="30" rows="10">メッセージを入力</textarea>
+          </p>
+    </form>
 
 </body>
+
 </html>
